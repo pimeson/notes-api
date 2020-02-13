@@ -5,6 +5,10 @@ module.exports = function (fastify, opts, next) {
     reply.send({ root: true })
   })
 
+  fastify.get('/ping', (req, res) => {
+    res.send('Pong!')
+  })
+
   next()
 }
 
